@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import io.surepass.aadhaarandroidsdk.models.APIModel
+import io.surepass.aadhaarandroidsdk.models.AppConstants
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
