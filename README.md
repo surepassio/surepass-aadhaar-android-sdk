@@ -172,7 +172,7 @@ Once you are happy with your integration and are ready to go live, please contac
 
 ## Getting notified about releases
 
-In case you want to get notified about our releases, feel free to access our [Bintray page](https://bintray.com/surepassio/aadhaar-android-sdk) and click the `Watch` button.
+In case you want to get notified about our releases, feel free to access our [Bintray page](https://bintray.com/beta/#/surepassio/aadhaar-android-sdk/io.surepass.aadhaarandroidsdk?tab=overview) and click the `Watch` button.
 
 
 ### Support
