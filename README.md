@@ -114,7 +114,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 
 
 When the user has successfully completed the flow, thhe `ApiResult` object contains information about the User.
-With the `ApiResult` object, you can get any infromation about the user that the [Aadhaar](https://uidai.gov.in/) provides. Here's the list of all the information you can get from the `ApiResult` object:
+With the `ApiResult` object, you can get any infromation about the user that the **Aadhaar** provides. Here's the list of all the information you can get from the `ApiResult` object:
 
 
 `apiResult.data.full_name` : Full name  
