@@ -20,7 +20,8 @@ class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first)
-        sdkController = SDKController(authorizationKey = "[Your API Token]")
+        sdkController = SDKController(authorizationKey = "[YOUR TOKEN]", companyName = "XYZ Pvt. Ltd.")
+        sdkController.environment = AppConstants.ENVIRONMENT_SANDBOX
         setonclickListeners()
     }
     private fun setonclickListeners() {
