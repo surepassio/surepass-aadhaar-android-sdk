@@ -64,6 +64,16 @@ val mySDKController : SDKController = SDKController(authorizationKey = "YOUR_API
 just replace `YOUR_API_TOKEN` with your Token
 and `ORGANISATION's NAME` with your organisation's name.
 
+**Important:** While testing, don't forget to set the environment as `sandbox` using the SDKController:
+ ```Kotlin
+ mySDKController.environment = AppConstants.ENVIRONMENT_SANDBOX
+ ```
+When going live, you can just leave this part or pass `production` in the environment:
+```Kotlin
+mySDKController.environment = AppConstants.ENVIRONMENT_PRODUCTION
+```
+By default, the environment is set to `AppConstants.ENVIRONMENT_PRODUCTION`
+
 ### Instantiating the client
 To use the SDK, you can Directly call the Main UI by Passing the Activity **`SurePassActivity`** inside an Intent and passing the **`SDKController`** object as Extra with the name: `"sdkController"`
 ```kotlin
