@@ -56,27 +56,24 @@ compileOptions {
 ```
 ### Creating the SDKController
 You must create a SurePass **SDKController** before you start the flow.
-For creating a **SDKController**, the minimum requirements is to have the **API Token** 
+For creating a **SDKController**, the minimum requirement is to have the **API Token** .
+Also, You've to pass your Organisation's Name inside the SDKController's Constructor
 ```Kotlin
-val mySDKController : SDKController = SDKController(authorizationKey = "YOUR_API_TOKEN")
+val mySDKController : SDKController = SDKController(authorizationKey = "YOUR_API_TOKEN", companyName = "ORGANISATION's NAME")
 ```
 just replace `YOUR_API_TOKEN` with your Token
+and `ORGANISATION's NAME` with your organisation's name.
 
 ### Instantiating the client
-To use the SDK, you can Directly call the Main UI by Passing the Activity **`AadhaarHomeActivity`** inside an Intent and passing the **`SDKController`** object as Extra with the name: `"sdkController"`
+To use the SDK, you can Directly call the Main UI by Passing the Activity **`SurePassActivity`** inside an Intent and passing the **`SDKController`** object as Extra with the name: `"sdkController"`
 ```kotlin
-val intent : Intent = Intent(context, AadhaarHomeActivity::class.java)
+val intent = Intent(this, SurePassActivity::class.java)
 intent.putExtra("sdkController", mySDKController)
 ```
 ### Starting the flow
-First declare an Intent to trigger the Main UI Screen like this:
+If you want to modify the flow, you can pass the activity name(the one which you want to open) as an Extra to the intent:
 ```kotlin
-val intent = Intent(this, SurePassActivity::class.java)
-```
-Also, you have to pass the activity name(the one which you want to open), and the `SDKController` as an Extra to the intent:
-```kotlin
-intent.putExtra("activityName", AppConstants.AADHAAR_HOME_ACTIVITY)     //keep the tags for extras same as shown,
-intent.putExtra("sdkController", sdkController)                         //these are important for the flow
+intent.putExtra("activityName", AppConstants.AADHAAR_HOME_ACTIVITY)     //keep the tags for extras same as shown, these are important for the flow
 ```
 
 Intent should be triggered with **startActivityForResult(intent, REQUEST_DATA)**, where ** REQUEST_DATA** is the pre-defined Request Code.
